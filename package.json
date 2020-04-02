@@ -4,8 +4,10 @@
   "description": "webpack - basic Html with css",
   "main": "main.js",
   "scripts": {
-    "start": "webpack-dev-server --config=config/webpack.config.js",
-    "build": "webpack --config=config/webpack.config.js"
+    "dev": "webpack-dev-server --config=config/webpack.config.js",
+    "build": "webpack --config=config/webpack.config.js",
+    "start": "webpack -p --config=config/webpack.config.js --progress",
+    "postinstall": "node server.js"
   },
   "author": "Codedev.it",
   "license": "MIT",
@@ -17,5 +19,8 @@
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
